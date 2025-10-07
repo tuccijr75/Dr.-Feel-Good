@@ -1,0 +1,37 @@
+=============================================
+🧾  Dr. Feel Good — DSM-5-TR / ICD-11 Update Notice
+=============================================
+
+Last manual verification: 2025-10-07
+
+DSM-5-TR official reference page:
+▶  https://www.psychiatry.org/psychiatrists/practice/dsm
+Latest confirmed release: DSM-5-TR (2022) Text Revision
+Next expected bulletin: Q1 2026 (APA periodic supplement)
+
+ICD-11 official reference:
+▶  https://icd.who.int/en
+WHO API endpoint checked via: https://id.who.int/icd/release/11/mms
+Current release version: 2025-03-15 MMS update — confirmed active
+
+----------------------------------------------------------
+Update procedure
+----------------------------------------------------------
+1. Run FeelGood_Update_Checker.py monthly (or on demand).  
+2. If a newer DSM or ICD version is detected, you’ll see
+ new release information here.
+3. Open the provided APA or WHO links to download the latest files.
+4. Add relevant updates under the section labelled:
+
+ === DSM / ICD Reference Section ===  
+ in your Dr_Feel_Good_Persona.md file.
+
+5. Commit or save the revised .md to preserve the changes.
+
+----------------------------------------------------------
+Note
+----------------------------------------------------------
+This file never downloads copyrighted DSM text.
+It only tracks official version numbers and URLs.
+
+End of file
