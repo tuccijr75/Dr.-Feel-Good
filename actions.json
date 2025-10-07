@@ -1,0 +1,130 @@
+{
+  "actions": [
+    {
+      "name": "runUpdateChecker",
+      "description": "Check DSM/ICD updates and refresh the DSM_ICD_Update_Notice in the repo.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "checkType": {
+            "type": "string",
+            "description": "Which source to check",
+            "enum": ["DSM", "ICD"]
+          }
+        },
+        "required": ["checkType"]
+      },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/check-updates",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "checkType": "{{checkType}}" }
+      }
+    },
+    {
+      "name": "logMood",
+      "description": "Log the user's current mood (number or word) with optional notes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "mood": { "type": "string", "description": "e.g., 7 or 'okay' " },
+          "notes": { "type": "string", "description": "optional context", "default": "" }
+        },
+        "required": ["mood"]
+      },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/log-mood",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "mood": "{{mood}}", "notes": "{{notes}}" }
+      }
+    },
+    {
+      "name": "addReminder",
+      "description": "Create a simple reminder with a due time.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reminder": { "type": "string", "description": "What to remember" },
+          "time": { "type": "string", "description": "ISO time like 2025-10-08T19:00:00Z" }
+        },
+        "required": ["reminder", "time"]
+      },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/add-reminder",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "reminder": "{{reminder}}", "due_date": "{{time}}" }
+      }
+    },
+    {
+      "name": "getHomework",
+      "description": "Return one short self-help homework item.",
+      "parameters": { "type": "object", "properties": {} },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/get-homework",
+        "headers": { "Content-Type": "application/json" }
+      }
+    },
+    {
+      "name": "getReflection",
+      "description": "Given the user's last message, return a closing self-reflection prompt if it contains a farewell keyword.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "userText": { "type": "string", "description": "The user's last message" }
+        },
+        "required": ["userText"]
+      },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/get-reflection",
+        "headers": { "Content-Type": "application/json" },
+        "body": { "userText": "{{userText}}" }
+      }
+    },
+    {
+      "name": "getMoods",
+      "description": "Fetch all mood log entries.",
+      "parameters": { "type": "object", "properties": {} },
+      "handler": {
+        "type": "http",
+        "method": "GET",
+        "url": "https://dr-feel-good.onrender.com/get-moods"
+      }
+    },
+    {
+      "name": "getReminders",
+      "description": "Fetch all reminders.",
+      "parameters": { "type": "object", "properties": {} },
+      "handler": {
+        "type": "http",
+        "method": "GET",
+        "url": "https://dr-feel-good.onrender.com/get-reminders"
+      }
+    },
+    {
+      "name": "completeReminder",
+      "description": "Mark a reminder as done by ID.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "description": "Reminder ID returned when created" }
+        },
+        "required": ["id"]
+      },
+      "handler": {
+        "type": "http",
+        "method": "POST",
+        "url": "https://dr-feel-good.onrender.com/complete-reminder/{{id}}",
+        "headers": { "Content-Type": "application/json" }
+      }
+    }
+  ]
+}
