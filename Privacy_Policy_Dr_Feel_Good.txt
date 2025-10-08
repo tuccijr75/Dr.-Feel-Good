@@ -1,0 +1,60 @@
+Privacy Policy — Dr. Feel Good
+Last updated: 2025-10-08
+
+What this is
+This policy explains what information this assistant (“Dr. Feel Good”) processes, why, and how you can control it. The assistant provides educational, supportive conversation only. It is not medical care and does not provide diagnosis or treatment.
+
+What we process
+
+1) Conversation content
+- What: Messages you type and the assistant’s replies.
+- Why: To answer your questions and keep context during the session.
+- Where: Processed by OpenAI’s models to generate responses.
+
+2) Optional features you turn on
+If you enable them, we store:
+- Mood logs and short notes
+- Reminders (text + due date/time)
+- Homework / reflection prompts you accept
+Where stored: a private repository controlled by the app operator (no personal contact details included here).
+Why: So you can review or reuse your data across sessions.
+
+3) Technical data (automatic)
+- Minimal service logs from the hosting provider for security, reliability, and abuse prevention (e.g., timestamp and request status).
+
+What we do not want
+Please don’t share highly sensitive data (medical records/PHI, passwords, SSNs, full financials). This assistant is not a covered entity and is not HIPAA-compliant.
+
+Legal bases (GDPR-style)
+- Contract/legitimate interests: to run the assistant and deliver responses.
+- Consent: for optional features (mood logs, reminders, homework saving).
+
+How we use your information
+- Provide answers and suggested practices.
+- If enabled: save, retrieve, and show your moods, reminders, and homework.
+- Maintain security, diagnose issues, and prevent abuse.
+
+Sharing
+We use subprocessors to operate the service (model inference, hosting, optional storage). We do not sell your data.
+
+Retention
+- Conversations: ephemeral at the app level; provider retention follows their policies.
+- Optional stored data: kept until you delete it or request deletion.
+- Service logs: typically 30–90 days for security and debugging.
+
+Your choices & rights
+- Don’t use optional features if you don’t want data stored.
+- View/export/delete: request deletion in-app or remove files from your storage repository.
+- Change your preferred name anytime by telling the assistant (“Change my name to …”).
+
+Children
+This assistant is for users 16+ (or the age required by your locale).
+
+Security
+We use industry-standard protections; no system is perfect. Keep your devices, accounts, and any access tokens secure.
+
+International transfers
+Data may be processed in the U.S. and other countries where our providers operate.
+
+Changes
+We may update this policy. The “Last updated” date will reflect the latest version.
